@@ -19,7 +19,15 @@ namespace Global_Variables_in_C_
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            BackColor = Globals.backColour;
+            ForeColor = Globals.foreColour;
             label1.Text = Globals.stringValue;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Settings settings = new Settings();
+            settings.Show();
         }
     }
 }

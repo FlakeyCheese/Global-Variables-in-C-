@@ -15,6 +15,7 @@ namespace Global_Variables_in_C_
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -22,6 +23,18 @@ namespace Global_Variables_in_C_
            Globals.stringValue = textBox1.Text;
             Form2 frm = new Form2();
             frm.Show();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            BackColor = Globals.backColour;
+            ForeColor = Globals.foreColour;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Settings settings = new Settings();
+            settings.Show();
         }
     }
 }
